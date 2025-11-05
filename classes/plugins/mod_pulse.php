@@ -101,9 +101,14 @@ class mod_pulse {
             // Delete records from pulse_users.
             $DB->delete_records_select('pulse_users', $selectsql, $params);
 
-            // If Pulse Pro is installed, delete records from local_pulsepro_availability as well.
+            // If Pulse Pro is installed, delete records for it as well:
+            // local plugin
             if (file_exists($CFG->dirroot . '/local/pulsepro/version.php')) {
                 $DB->delete_records_select('local_pulsepro_availability', $selectsql, $params);
+            }
+            // availability addon
+            if (file_exists($CFG->dirroot . '/mod/pulse/addon/availability/version.php')) {
+                $DB->delete_records_select('pulseaddon_availability', $selectsql, $params);
             }
         }
     }

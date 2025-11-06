@@ -21,8 +21,8 @@
  * @copyright  2017 Dan Marsden
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-$string['pluginname'] = 'Course recompletion';
+ 
+ $string['pluginname'] = 'Course recompletion';
 $string['recompletion'] = 'recompletion';
 $string['editrecompletion'] = 'Edit course recompletion settings';
 $string['recompletiontype:period'] = 'Period';
@@ -216,6 +216,9 @@ When user achieved new completion in the course, the updated course grade will b
 $string['pulsenotifications'] = 'Pulse notifications';
 $string['pulsenotifications_help'] = 'Should Pulse notifications which have already been sent be reset?';
 $string['pulseresetnotifications'] = 'Reset notifications';
+$string['videotimesessions'] = 'Video Time sessions';
+$string['videotimesessions_help'] = 'Should Video Time sessions be reset?';
+$string['videotimeresetsessions'] = 'Reset sessions';
 $string['choiceattempts'] = "Choice attempts";
 $string['archivechoice'] = "Archive old choice attempts";
 $string['choiceattempts_help'] = 'Should existing Choice attempts be deleted - if archive is selected, the old Choice attempts will be archived in the local_recompletion_cha table.';

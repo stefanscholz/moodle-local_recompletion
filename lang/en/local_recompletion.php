@@ -21,8 +21,7 @@
  * @copyright  2017 Dan Marsden
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- 
- $string['pluginname'] = 'Course recompletion';
+$string['pluginname'] = 'Course recompletion';
 $string['recompletion'] = 'recompletion';
 $string['editrecompletion'] = 'Edit course recompletion settings';
 $string['recompletiontype:period'] = 'Period';

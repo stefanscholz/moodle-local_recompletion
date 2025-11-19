@@ -101,9 +101,16 @@ class mod_pulse {
             // Delete records from pulse_users.
             $DB->delete_records_select('pulse_users', $selectsql, $params);
 
-            // If Pulse Pro is installed, delete records from local_pulsepro_availability as well.
+            // If Pulse Pro is installed, delete records for it as well:
+            // local plugin
             if (file_exists($CFG->dirroot . '/local/pulsepro/version.php')) {
                 $DB->delete_records_select('local_pulsepro_availability', $selectsql, $params);
+            }
+
+            // Initiate the pulse to reset the actions and addons to support recompletion.
+            if (class_exists('\mod_pulse\helper') && method_exists('\mod_pulse\helper', 'local_recompletion_reset')) {
+                // Trigger the recompletion reset for pulse.
+                \mod_pulse\helper::local_recompletion_reset($userid, $course, $config);
             }
         }
     }
